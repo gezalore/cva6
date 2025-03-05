@@ -108,7 +108,7 @@ module ariane_verilog_wrap
   // 256KB..16K cycles
   // etc, so this should be enough for 512k per tile
 
-  logic [15:0] wake_up_cnt_d, wake_up_cnt_q;
+  logic [7:0] wake_up_cnt_d, wake_up_cnt_q;
   logic rst_n;
 
   assign wake_up_cnt_d = (wake_up_cnt_q[$high(wake_up_cnt_q)]) ? wake_up_cnt_q : wake_up_cnt_q + 1;
